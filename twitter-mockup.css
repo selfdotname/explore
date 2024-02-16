@@ -1,0 +1,184 @@
+* {
+    font-family: sans-serif;
+}
+
+.hf-image {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.hf-image2 {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.hf-image3 {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 5px;
+    bottom: 70px;
+    background-color: #1d9bf0;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 5px 5px grey;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.viewport {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.header,
+.footer {
+    flex: 1;
+}
+
+
+.content-container::-webkit-scrollbar {
+    display: none;
+}
+
+.header-row-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-header {
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+}
+
+.header-row-2 {
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #d3d8db;
+}
+
+.text-container {
+    padding: 5px;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.text-container:nth-child(1) {
+    border-bottom: 3px solid #1b9bf2;
+
+}
+
+.text {
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d3d8db;
+}
+
+.tweet-box {
+    display: flex;
+    border-bottom: 1px solid #d3d8db;
+    border-top: 1px solid #d3d8db;
+    padding: 5px 0;
+}
+
+.tweet-text-box {
+    flex: 1;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-and-username {
+    display: flex;
+}
+
+.name-and-username>* {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.tweet-image {
+    display: block;
+    width: 100%;
+    max-width: 308px;
+    height: 100%;
+    max-height: 308px;
+    border-radius: 5%;
+    margin-top: 5px;
+    padding: 0 5px;
+}
+
+.tweet {
+    margin-top: 5px;
+    padding: 0 5px;
+}
+
+.content {
+    height: fit-content;
+    /* padding: ; */
+}
+
+.content-container {
+    flex: 10;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.impressions-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.impressions-container-unit {
+    display: flex;
+}
+
+.impressions-container-unit * {
+    display: block;
+}
+
+.impressions-image {
+    width: 20px;
+}
+
+.impressions-count {
+    display: flex;
+    align-items: center;
+    font-size: 75%;
+    padding: 7px 5px 5px 5px;
+}
+
+
+body * {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
