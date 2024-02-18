@@ -1,0 +1,214 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* -----------------------VIEWPORT----------------------- */
+.viewport {
+    height: 100%;
+    background-color: #121b22;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* -----------------------HEADER----------------------- */
+.header {
+    display: flex;
+    background-color: #1f2c34;
+    align-items: center;
+    padding: 15px 10px;
+    user-select: none;
+}
+
+.back-arrow-image {
+    display: block;
+    width: 35px;
+    height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header-profile-picture {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.sender-container {
+    color: #ebecf0;
+    font-size: 115%;
+    flex: 1;
+    transition: 1s ease;
+}
+
+.sender-status {
+    font-size: 70%;
+}
+
+.header-icons {
+    display: block;
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* --------------------------CONTENT CONTAINER-------------------------- */
+.content-container {
+    flex: 1;
+    background-image: url(imgs-WA/HD-wallpaper-whatsapp-dark-mode-whatsapp.jpg);
+    background-position: top center;
+    overflow: auto;
+}
+
+.content-container::-webkit-scrollbar {
+    display: none;
+}
+
+.content-wrap {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.date {
+    color: #85969e;
+    background-color: #212e36;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.encrypted-story {
+    text-align: center;
+    color: #fbd282;
+    background-color: #212e36;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+.encrypted-story-icon {
+    width: 17px;
+}
+
+.recieved-message {
+    color: #e9edf0;
+    border-radius: 0 10px 10px 10px;
+    background-color: #212e36;
+    padding: 10px;
+    max-width: 330px;
+    min-width: 330px;
+    display: flex;
+    margin: 5px 0 5px 10px;
+}
+
+.sent-message-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+    width: 100%;
+}
+
+.sent-message {
+    color: #e9edf0;
+    border-radius: 10px 0 10px 10px;
+    background-color: #005d4b;
+    padding: 10px;
+    max-width: 330px;
+    min-width: 330px;
+    display: flex;
+    margin: 5px 10px 5px 0;
+}
+
+.r-message,
+.s-message {
+    flex: 1;
+}
+
+.s-message {
+    word-break: break-all;
+}
+
+.r-time,
+.s-time {
+    display: flex;
+    align-items: flex-end;
+    font-size: 90%;
+    margin-left: 5px;
+}
+
+/* --------------------------FOOTER-------------------------- */
+.footer {
+    display: flex;
+    padding: 5px;
+}
+
+.message-box {
+    flex: 1;
+    display: flex;
+    border-radius: 10px;
+    background-color: #1f2c34;
+}
+
+.footer-icons,
+.footer-message {
+    display: block;
+}
+
+.footer-icons {
+    width: 30px;
+}
+
+.footer-icon-container {
+    padding: 10px;
+}
+
+.footer-message {
+    font-size: 150%;
+    background-color: #1f2c34;
+    color: white;
+    border: none;
+    border-style: none;
+    caret-color: #00a884;
+    width: 100%;
+}
+
+.footer-message:focus {
+    outline: none;
+}
+
+.footer-message-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.vn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00a884;
+    border-radius: 50%;
+    margin-left: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 11px;
+    cursor: pointer;
+}
+
+
+/* -------------------------------ALL LINKS------------------------------- */
+a {
+    color: lightblue;
+}
