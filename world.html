@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D world</title>
+</head>
+
+<body>
+    <div class="intro-and-instruct">
+        <div class="name">Dietake Obaro</div>
+        <div class="instruct">
+            Ensure page is running on a PC or desktop machine
+            <br>
+            w : move front
+            <br>
+            s : move back
+            <br>
+            a : move left
+            <br>
+            d : move right
+            <br>
+            r : move up (rise)
+            <br>
+            f : move down (fall)
+            <br>
+            ALL CHARACTERS ARE IN LOWER CASE
+        </div>
+    </div>
+    <div class="scene">
+        <div class="obj0">
+            <div class="obj1"></div>
+            <div class="obj2"></div>
+            <div class="obj3"></div>
+            <div class="obj4"></div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            background-image: linear-gradient(to top,
+                    rgba(128, 0, 128, 0.562),
+                    rgba(255, 182, 193, 0.541));
+            height: 100vh;
+        }
+
+        .scene {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            perspective: 500px;
+            transform-style: preserve-3d;
+            outline: 5px solid;
+        }
+
+        .obj0 {
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(165, 42, 42, 0.459);
+
+
+            position: relative;
+
+            transform-style: preserve-3d;
+            transform-origin: 50% 100%;
+            transform: rotateX(90deg);
+        }
+
+        .obj1 {
+            width: 50px;
+            height: 50px;
+
+            background-color: rgba(0, 128, 0, 0.534);
+
+            position: absolute;
+
+
+            transform-origin: 0% 0%;
+            transform: translate(50px, 50px) rotateY(-90deg);
+        }
+
+        .obj2 {
+            width: 50px;
+            height: 50px;
+
+            background-color: rgba(127, 255, 212, 0.555);
+
+            position: absolute;
+
+
+            transform-origin: 100% 0%;
+            transform: translate(50px, 50px) rotateY(90deg);
+        }
+
+        .obj3 {
+            width: 50px;
+            height: 50px;
+
+            background-color: rgba(255, 182, 193, 0.521);
+
+            position: absolute;
+
+
+            transform-origin: 0% 0%;
+            transform: translate(50px, 50px) rotateX(90deg);
+        }
+
+        .obj4 {
+            width: 50px;
+            height: 50px;
+
+            background-color: rgba(0, 0, 0, 0.562);
+
+            position: absolute;
+
+
+            transform-origin: 0% 0%;
+            transform: translate(50px, 50px) translateZ(50px);
+        }
+
+        .intro-and-instruct {
+            padding: 10px;
+            opacity: 0.5;
+        }
+
+        .name {
+            font-size: 3em;
+            font-weight: 900;
+            font-family: sans-serif;
+        }
+
+        .instruct {
+            font-family: sans-serif;
+        }
+    </style>
+
+    <script>
+        var obj0 = document.getElementsByClassName('obj0')[0]
+        var defaultX = 0
+        var defaultY = 0
+        var defaultZ = 0
+        var defaultZRot = 0
+
+        // var a = window.getComputedStyle(obj0).getPropertyValue('transform-origin')
+        // a = a.split(' ')
+        // var transformOriginX = parseInt(a[0])
+        // var transformOriginY = parseInt(a[1])
+
+        window.onkeypress = (event) => {
+            switch (event.key) {
+                case 'w':
+                    defaultY += 5
+                    obj0.style.transform = `rotateX(90deg) 
+                                            translateY(${defaultY}px)
+                                            translateX(${defaultX}px) 
+                                            translateZ(${defaultZ}px) 
+                                            rotateZ(${defaultZRot}deg)`
+                    break
+                case 's':
+                    defaultY += -5
+                    obj0.style.transform = `rotateX(90deg) 
+                                            translateY(${defaultY}px) 
+                                            translateX(${defaultX}px) 
+                                            translateZ(${defaultZ}px) 
+                                            rotateZ(${defaultZRot}deg)`
+                    break
+
+                case 'a':
+                    defaultX += 5
+                    obj0.style.transform = `rotateX(90deg)  
+                                            translateY(${defaultY}px) 
+                                            translateX(${defaultX}px) 
+                                            translateZ(${defaultZ}px) 
+                                            rotateZ(${defaultZRot}deg)`
+                    break
+                case 'd':
+                    defaultX += -5
+                    obj0.style.transform = `rotateX(90deg) 
+                                            translateY(${defaultY}px) 
+                                            translateX(${defaultX}px) 
+                                            translateZ(${defaultZ}px) 
+                                            rotateZ(${defaultZRot}deg)`
+                    break
+
+                case 'r':
+                    defaultZ += -5
+                    obj0.style.transform = `rotateX(90deg)  
+                                            translateY(${defaultY}px) 
+                                            translateX(${defaultX}px) 
+                                            translateZ(${defaultZ}px) 
+                                            rotateZ(${defaultZRot}deg)`
+                    break
+                case 'f':
+                    defaultZ += 5
+                    obj0.style.transform = `rotateX(90deg) 
+                                            translateY(${defaultY}px) 
+                                            translateX(${defaultX}px) 
+                                            translateZ(${defaultZ}px) 
+                                            rotateZ(${defaultZRot}deg)`
+                    break
+
+                // case 'e':
+                //     defaultZRot += -1
+                //     obj0.style.transform = `rotateX(90deg)  
+                //                             translateY(${defaultY}px) 
+                //                             translateX(${defaultX}px) 
+                //                             translateZ(${defaultZ}px) 
+                //                             rotateZ(${defaultZRot}deg)`
+                //     break
+                // case 'q':
+                //     defaultZRot += 1
+                //     obj0.style.transform = `rotateX(90deg) 
+                //                             translateY(${defaultY}px) 
+                //                             translateX(${defaultX}px) 
+                //                             translateZ(${defaultZ}px) 
+                //                             rotateZ(${defaultZRot}deg)`
+                //     break
+            }
+        }
+    </script>
+</body>
+
+</html>
