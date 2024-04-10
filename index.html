@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Stone Data Services</title>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: 'Being Boring';
+            src: url('./fonts/being_boring/Being\ Boring.otf');
+        }
+
+        * {
+            font-family: 'Being Boring';
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            letter-spacing: 5px;
+        }
+
+        .viewport {
+            height: 100%;
+            overflow: auto;
+        }
+
+        .section-1 h1 {
+            text-align: center;
+            font-size: 50px;
+            padding: 10px 0;
+            text-transform: capitalize;
+        }
+
+        .section-1 {
+            padding: 20px;
+        }
+
+        .section-1>div {
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .viewport>h3 {
+            text-align: center;
+            padding: 30px 0;
+            text-transform: uppercase;
+        }
+
+        .section-2 h1,
+        .section-3 h1,
+        .section-4 h1,
+        .section-5 h1 {
+            text-align: center;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .section-2 p,
+        .section-3 p,
+        .section-4 p,
+        .section-5 p {
+            text-align: center;
+        }
+
+        .section-2>div,
+        .section-3>div,
+        .section-4>div,
+        .section-5>div {
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .section-1,
+        .section-2,
+        .section-3,
+        .section-4,
+        .section-5 {
+            padding: 50px 10px;
+        }
+
+        a,
+        img {
+            display: block;
+        }
+
+
+        a {
+            width: fit-content;
+
+        }
+
+        img {
+            width: 50px;
+        }
+
+        .section-1 {
+            background-color: rgb(235, 235, 235);
+            background-image: url('./images/2148467288.jpg');
+            background-size: cover;
+        }
+
+        .section-1>div {
+            backdrop-filter: blur(10px);
+        }
+
+        .section-1 p {
+            padding: 5px 0;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .section-2 {
+            background-image: url('./images/New-mtn-logo.jpg');
+            background-size: cover;
+        }
+
+        .section-2>div {
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-3 {
+            background-image: url('./images/Airtel_logo-01.png');
+            background-size: cover;
+        }
+
+        .section-3>div {
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-4 {
+            background-image: url('./images/glo\ logo.jpg');
+            background-size: cover;
+        }
+
+        .section-4>div {
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-5 {
+            background-image: url('./images/9mobile\ logo.png');
+        }
+
+        .section-5>div {
+            color: black;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-6 {
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .section-6>a {
+            border: 1px solid rgb(0, 255, 55);
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+    <div class="viewport">
+        <section class="section-1">
+            <div>
+                <h1>Silver stone data services</h1>
+                <p>&bull; Affordable data rates</p>
+                <p>&bull; All networks</p>
+                <p>&bull; Don't have to worry about expensive data deals</p>
+                <p>&bull; Fast and reliable</p>
+            </div>
+        </section>
+        <h3>Data Plans</h3>
+        <section class="section-2">
+            <div>
+                <h1>MTN</h1>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>1GB</td>
+                            <td>N318</td>
+                        </tr>
+                        <tr>
+                            <td>2GB</td>
+                            <td>N636</td>
+                        </tr>
+                        <tr>
+                            <td>3GB</td>
+                            <td>N954</td>
+                        </tr>
+                        <tr>
+                            <td>4GB</td>
+                            <td>N1,272</td>
+                        </tr>
+                        <tr>
+                            <td>5GB</td>
+                            <td>N1,525 &lpar;Discount&rpar;</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>...more available</p>
+            </div>
+        </section>
+        <section class="section-3">
+            <div>
+                <h1>Airtel</h1>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>1GB</td>
+                            <td>N339</td>
+                        </tr>
+                        <tr>
+                            <td>2GB</td>
+                            <td>N678</td>
+                        </tr>
+                        <tr>
+                            <td>3GB</td>
+                            <td>N1,017</td>
+                        </tr>
+                        <tr>
+                            <td>4GB</td>
+                            <td>N1,356</td>
+                        </tr>
+                        <tr>
+                            <td>5GB</td>
+                            <td>N1,650 &lpar;Discount&rpar;</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>...more available</p>
+            </div>
+
+        </section>
+        <section class="section-4">
+            <div>
+                <h1>Glo</h1>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>1GB</td>
+                            <td>N288</td>
+                        </tr>
+                        <tr>
+                            <td>2GB</td>
+                            <td>N576</td>
+                        </tr>
+                        <tr>
+                            <td>3GB</td>
+                            <td>N864</td>
+                        </tr>
+                        <tr>
+                            <td>4GB</td>
+                            <td>N1,152</td>
+                        </tr>
+                        <tr>
+                            <td>5GB</td>
+                            <td>N1,398 &lpar;Discount&rpar;</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>...more available</p>
+            </div>
+
+        </section>
+        <section class="section-5">
+            <div>
+                <h1>9Mobile</h1>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>1GB</td>
+                            <td>N313</td>
+                        </tr>
+                        <tr>
+                            <td>2GB</td>
+                            <td>N626</td>
+                        </tr>
+                        <tr>
+                            <td>3GB</td>
+                            <td>N939</td>
+                        </tr>
+                        <tr>
+                            <td>4GB</td>
+                            <td>N1,252</td>
+                        </tr>
+                        <tr>
+                            <td>5GB</td>
+                            <td>N1,525 &lpar;Discount&rpar;</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>...more available</p>
+            </div>
+        </section>
+        <h3>Send a message</h3>
+        <section class="section-6">
+            <a href="https://wa.me/2349078879704">
+                <img src="images/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png" alt="WhatsApp Imgae">
+            </a>
+        </section>
+    </div>
+</body>
+
+</html>
