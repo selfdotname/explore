@@ -1,0 +1,108 @@
+body, .header, .footer {
+    margin: 0;
+}
+
+body {
+    font-family: 'helvetica';
+}
+
+.header {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 20px;
+    background-color: rgb(235, 235, 235);
+    position: sticky;
+    top: 0;
+}
+
+.add-tasks * {
+    display: block;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.add-tasks {
+    display: flex;
+    margin: 30px auto;
+    width: fit-content;
+}
+
+.add-tasks input {
+    padding: 10px;
+}
+
+.add-tasks button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+    margin-left: 10px;
+}
+
+.complete, .delete {
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+}
+
+.complete {
+    background-color: rgb(77, 126, 77);
+}
+
+.delete {
+    background-color: rgb(255, 113, 113);
+    margin-left: 10px;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.task-container {
+    padding: 0 20px;
+    margin-bottom: 200px;
+}
+
+.task-card {
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgb(192, 192, 192);
+    padding: 20px;
+    min-width: 350px;
+    max-width: 700px;
+}
+
+.task {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-tasks {
+    margin: 0;
+    padding: 20px;
+    font-weight: 900;
+}
+
+.footer {
+    font-weight: 900;
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.statistics-box {
+    position: fixed;
+    bottom: 60px;
+    font-weight: 900;
+    font-family: inherit;
+    padding: 20px;
+    z-index: 0;
+    background-color: white;
+    width: 100%;
+}
