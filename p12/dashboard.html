@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="dashboard.js" type="module" defer></script>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="dash-header">Dashboard</h1>
+        <table>
+            <tr>
+                <td>Total income</td>
+                <td><span id="income"></span></td>
+            </tr>
+            <tr>
+                <td>Total expenses</td>
+                <td><span id="expenses"></span></td>
+            </tr>
+            <tr>
+                <td>Balance</td>
+                <td><span id="balance"></span></td>
+            </tr>
+        </table>
+    </header>
+    <h1 id="trn-hist">Transaction History</h1>
+    filter by:
+    <select name="" id="">
+        <option value="asc">Newer first</option>
+        <option value="des" selected>Oldest first</option>
+    </select>
+</body>
+
+</html>

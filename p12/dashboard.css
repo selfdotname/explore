@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    font-family: "helvetica";
+    padding: 10px;
+}
+
+#transaction-card * {
+    margin: 0;
+    font-weight: 100;
+}
+
+#transaction-card {
+    margin: 20px 0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(209, 209, 209);
+}
+
+#date,
+#type {
+    font-size: 15px;
+}
+
+#type {
+    text-align: right;
+}
+
+
+#desc {
+    font-weight: 700;
+}
+
+#amount,
+#type {
+    font-weight: 900;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#income,
+#expenses,
+#balance {
+    font-weight: 900;
+}
+
+#dash-header {
+    margin: 0;
+    padding: 10px 0;
+}
+
+#trn-hist{
+    text-align: center;
+}
+table{
+    padding: 10px 0;
+}
