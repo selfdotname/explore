@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <video playasinline controls></video>
+    <button id="start">Start Camera</button>
+    <button id="flip">Flip Camera</button>
+    <script>
+        function initiate_camera(mode) {
+            navigator.mediaDevices.getUserMedia({
+                video: {
+                    facingMode: { exact: mode }
+                }, audio: true
+            })
+                .then((stream) => {
+                    const videoElement = document.querySelector('video');
+                    videoElement.srcObject = stream;
+                    videoElement.play(); // Works after user interaction
+                })
+                .catch((error) => {
+                    console.error("Error accessing media devices:", error);
+                });
+        }
+        var mode = "user"
+        document.querySelector('#start').onclick = () => {
+            initiate_camera(mode)
+        }
+
+        document.querySelector('#flip').onclick = () => {
+            mode = (mode == "user") ? "environment" : "user"
+            initiate_camera(mode)
+        }
+    </script>
+</body>
+
+</html>
