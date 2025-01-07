@@ -13,7 +13,7 @@
         if (Notification.permission === "default") {
             Notification.requestPermission().then(permission => {
                 if (permission === "granted") {
-                    console.log("Notification permission granted.");
+                    document.querySelector("h1").innerText = "Notification permission granted.";
                     const notification = new Notification("Title of notification",
                         {
                             body: "body of notication",
@@ -22,11 +22,10 @@
                     )
 
                     notification.onclick = () => {
-                        console.log("notification clicked");
-
+                        document.querySelector("h1").innerText = "notification clicked";
                     }
                 } else {
-                    console.log("Notification permission denied.");
+                    document.querySelector("h1").innerText = "Notification permission denied.";
                 }
             });
         }
