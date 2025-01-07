@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --light-mode-color: rgb(255, 204, 0);
+            --light-mode-bg: rgb(239, 239, 239);
+            --light-mode-font-color: white;
+
+            --dark-mode-color: rgb(250, 250, 250);
+            --dark-mode-bg: rgb(26, 26, 26);
+            --dark-mode-font-color: black;
+        }
+
+        body {
+            background-color: var(--light-mode-bg);
+            color: var(--light-mode-font-color);
+        }
+
+        button {
+            background-color: var(--light-mode-color);
+            color: inherit;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="light-mode-button">Light Theme</button><br>
+    <button id="dark-mode-button">Dark Theme</button>
+    <h1>2025</h1>
+    <script>
+        function element(idString) {
+            return document.getElementById(idString);
+        }
+        //-------------------------------------------
+        const lightModeButton = element("light-mode-button")
+        const darkModeButton = element("dark-mode-button")
+
+        lightModeButton.onclick = function () {
+            document.body.style.backgroundColor = "var(--light-mode-bg)"
+            lightModeButton.style.color = "var(--light-mode-font-color)"
+            darkModeButton.style.color = "var(--light-mode-font-color)"
+        }
+
+        darkModeButton.onclick = function () {
+            document.body.style.backgroundColor = "var(--dark-mode-bg)"
+            lightModeButton.style.color = "var(--dark-mode-font-color)"
+            darkModeButton.style.color = "var(--dark-mode-font-color)"
+        }
+    </script>
+</body>
+
+</html>
